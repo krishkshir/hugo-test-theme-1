@@ -4,6 +4,9 @@
 {{ else }}
    <div>some stuff to be shown if [nameOfYourTemplate] is NOT used to render the current page</div>
 {{ end }}
+
+{{ printf "value = %[1]v, type = %[1]T" .Layout }}
+
 <main>
     <ul>
         {{ range .Pages }}
