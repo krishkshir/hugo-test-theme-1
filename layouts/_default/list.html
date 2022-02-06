@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ if eq .Layout "list" }}
+   <div>some stuff to be shown if [nameOfYourTemplate] is used to render the current page</div>
+{{ else }}
+   <div>some stuff to be shown if [nameOfYourTemplate] is NOT used to render the current page</div>
+{{ end }}
+<main>
+    <ul>
+        {{ range .Pages }}
+            <li> {{ .Title }} </li>
+    </ul>
+</main>
+{{ end }}
